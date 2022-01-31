@@ -17,7 +17,7 @@ json = {
 
 r = requests.post('http://onlinefraudapi.herokuapp.com/is-fraud',json=json)
 print(r)
-print(r.json())
+#print(r.json())
 
 
 #for k in range(0,34):
