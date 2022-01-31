@@ -16,6 +16,8 @@ cat_scaler = load('TypeScalerFinal.joblib')
 @app.route("/is-fraud", methods=["POST"])
 def analyze():
     data = request.get_json()
+    if not data.request:
+        return jsonify(data), 501
     if os.path.exists('dumpfile.json'):
         with open('dumpfile.json','r') as fout:
             r = fout.readlines()[-1]
@@ -24,6 +26,7 @@ def analyze():
         prevAmt = r['amount']
         prevType = cat_scaler.transform(np.array(r['type']).reshape(1,-1))[0][0]
     else:
+        os.remove('dumpfile.json')
         prev_step = np.nan
         prevAmt = np.nan
         prevType = np.nan
