@@ -125,4 +125,3 @@ Werkzeug==2.0.2
 widgetsnbextension==2.0.0
 xgboost==1.5.2
 zipp==1.0.0
-zope.interface==4.7.1
