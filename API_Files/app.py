@@ -16,7 +16,7 @@ cat_scaler = load('TypeScalerFinal.joblib')
 @app.route("/is-fraud", methods=["POST"])
 def analyze():
     data = request.get_json()
-    if not data.request:
+    if not request.data:
         return jsonify(data), 501
     if os.path.exists('dumpfile.json'):
         with open('dumpfile.json','r') as fout:
