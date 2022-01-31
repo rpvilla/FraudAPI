@@ -15,7 +15,7 @@ json = {
 }
 
 
-r = requests.post('http://onlinefraudapi.herokuapp.com/is-fraud',json=json)
+r = requests.post('https://onlinefraudapi.herokuapp.com/is-fraud',json=json)
 print(r)
 #print(r.json())
 

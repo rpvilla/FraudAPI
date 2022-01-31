@@ -8,10 +8,10 @@ import os
 app = Flask(__name__)
 
 # load model
-mdl = load('XGBoostModelFinal.joblib')
+#mdl = load('XGBoostModelFinal.joblib')
 
 # load type scaler
-cat_scaler = load('TypeScalerFinal.joblib')
+#cat_scaler = load('TypeScalerFinal.joblib')
 
 @app.route("/is-fraud", methods=["POST"])
 def analyze():
@@ -34,8 +34,8 @@ def analyze():
     #type = cat_scaler.transform(np.array(data['type']).reshape(1,-1))[0][0]
     #deltaOrig = data['newbalanceOrig'] - data['oldbalanceOrig']
     #features = np.array([data['amount'],deltaDest,data['step'],prev_step,
-                        type,data['oldbalanceOrig'],data['newbalanceOrig'],data['newbalanceDest'],
-                        data['oldbalanceDest'],deltaOrig,prevAmt,prevType],dtype=float)
+    #                    type,data['oldbalanceOrig'],data['newbalanceOrig'],data['newbalanceDest'],
+    #                    data['oldbalanceDest'],deltaOrig,prevAmt,prevType],dtype=float)
     #pred = mdl.predict(features.reshape(1,-1))
     #if pred == 1:
     #    p = True
