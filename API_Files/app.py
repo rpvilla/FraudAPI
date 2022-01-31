@@ -42,3 +42,7 @@ def analyze():
     else:
         p = False
     return jsonify({"isFraud": p})
+
+
+if __name__ == "main":
+    app.run(debug=False)
