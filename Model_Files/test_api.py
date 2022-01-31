@@ -15,16 +15,16 @@ json = {
 }
 
 
-r = requests.post('https://onlinefraudapi.herokuapp.com/is-fraud',json=json)
+r = requests.post('http://onlinefraudapi.herokuapp.com/is-fraud',json=json)
 print(r)
 print(r.json())
 
 
-for k in range(0,34):
-    json['oldbalanceOrig'] = json['newbalanceOrig']
-    json['newbalanceOrig'] = json['newbalanceOrig'] - json['amount']
+#for k in range(0,34):
+#    json['oldbalanceOrig'] = json['newbalanceOrig']
+#    json['newbalanceOrig'] = json['newbalanceOrig'] - json['amount']
     #json['newbalanceDest'] = json['oldbalanceDest'] + json['amount']
     #json['oldbalanceDest'] = json['newbalanceDest']
-    r = requests.post('https://onlinefraudapi.herokuapp.com/',json=json)
-    print(r.json())
-print(json)
+#    r = requests.post('https://onlinefraudapi.herokuapp.com/',json=json)
+#    print(r.json())
+#print(json)
